@@ -71,6 +71,10 @@ Chainsaw: Chained Automated Workflow-based Exploit Generation.
 
 CSPAutoGen: Black-box Enforcement of Content Security Policy upon Real-world Websites
 
+## NDSS2019
+Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment
+https://daoyuan14.github.io/papers/NDSS19_OpenPort.pdf
+
 ## NDSS2018
 
 SYNODE: Understanding and Automatically Preventing Injection Attacks on NODE.JS.
