@@ -4,9 +4,11 @@
 
 ## USENIX2018
 
-NAVEX: Precise and Scalable Exploit Generation for Dynamic Web Applications. # Reading
+NAVEX: Precise and Scalable Exploit Generation for Dynamic Web Applications. 
 
-Freezing the Web: A Study of ReDoS Vulnerabilities in JavaScript-based Web Servers. # Reading
+通过动静态结合的方式生成攻击脚本
+
+Freezing the Web: A Study of ReDoS Vulnerabilities in JavaScript-based Web Servers. 
 
 Rampart: protecting web applications from CPU-exhaustion denial-of-service attacks.
 
@@ -81,8 +83,19 @@ SYNODE: Understanding and Automatically Preventing Injection Attacks on NODE.JS.
 
 Riding out DOMsday: Towards Detecting and Preventing DOM Cross-Site Scripting. **检测DOM型XSS方法**
 
+## NDSS2017
+
+Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web.
+
+
+
 ## NDSS2016
 
-Attack Patterns for Black-Box Security Testing of Multi-Party Web Applications. **Web应用的黑盒测试**
+Attack Patterns for Black-Box Security Testing of Multi-Party Web Applications. 
 
-Are these Ads Safe: Detecting Hidden Attacks through the Mobile App-Web Interfaces. 
+我们针对单点登陆(SSO)存在的问题，设计了两种攻击模式CSRF和XSS，并且基于ZAP设计了扫描器，经过实验我们发先它能发现知名网站的安全性问题。
+##NDSS15
+Exploiting and Protecting Dynamic Code Generation.
+## NDSS14
+Toward Black-Box Detection of Logic Flaws in Web Applications.
+
