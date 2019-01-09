@@ -77,25 +77,42 @@ CSPAutoGen: Black-box Enforcement of Content Security Policy upon Real-world Web
 Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment
 https://daoyuan14.github.io/papers/NDSS19_OpenPort.pdf
 
-## NDSS2018
+# NDSS2018
 
 SYNODE: Understanding and Automatically Preventing Injection Attacks on NODE.JS.
 
-Riding out DOMsday: Towards Detecting and Preventing DOM Cross-Site Scripting. **检测DOM型XSS方法**
+## Riding out DOMsday: Towards Detecting and Preventing DOM Cross-Site Scripting[NDSS18]
+### 什么是DOM型XSS：
+![1546778397220](readme/1546778397220.png)
+### 怎么防御：
+
+![1546778565366](readme/1546778565366.png)
+
+### 方法
+
+我们使用了向V8引擎注入污点技术，具体来说，我们在每个输入的字符串上增加了一个标记，最后看这些标记是否会被document.write()等函数带出。在中间过程中我们需要考虑encodeURI等函数，他们应使标记失效。
+
+### 实验结果
+
+我们与其他静态工具做对比，发现BurpSuite只发现了10%的问题，但是发现了一些其他我们没有发现的问题，而其他工具存在相当高的误报率——95%
+
+### 相关链接
+
+https://github.com/wrmelicher/ChromiumTaintTracking
 
 ## NDSS2017
 
 Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web.
-
-
 
 ## NDSS2016
 
 Attack Patterns for Black-Box Security Testing of Multi-Party Web Applications. 
 
 我们针对单点登陆(SSO)存在的问题，设计了两种攻击模式CSRF和XSS，并且基于ZAP设计了扫描器，经过实验我们发先它能发现知名网站的安全性问题。
-##NDSS15
+
+## NDSS15
 Exploiting and Protecting Dynamic Code Generation.
+
 ## NDSS14
 Toward Black-Box Detection of Logic Flaws in Web Applications.
 
