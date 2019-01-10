@@ -2,11 +2,14 @@
 
 本仓库将收录近三年来Web方向的相关研究，希望自己能从中找到新的研究方向。
 
-## USENIX2018
+# USENIX2018
 
-NAVEX: Precise and Scalable Exploit Generation for Dynamic Web Applications. 
+## NAVEX: Precise and Scalable Exploit Generation for Dynamic Web Applications. 
 
-通过动静态结合的方式生成攻击脚本
+我们构造了一个可拓展的动静结合的web漏洞生成框架，第一步，我们用符号执行构建各个模块的行为模型，第二不，我们构建应用并且使用爬虫获取网站路径，同时使用动态符号执行最大化代码覆盖范围
+
+### 相关文献
+* https://github.com/aalhuz/navex
 
 Freezing the Web: A Study of ReDoS Vulnerabilities in JavaScript-based Web Servers. 
 
@@ -45,7 +48,7 @@ On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering 
 
 ## FSE2018
 
-The impact of regular expression denial of service (ReDoS) in practice: an empirical study at the ecosystem scale. **ReDoS哦**
+The impact of regular expression denial of service (ReDoS) in practice: an empirical study at the ecosystem scale. **ReDoS哦*
 
 
 
@@ -73,15 +76,35 @@ Chainsaw: Chained Automated Workflow-based Exploit Generation.
 
 CSPAutoGen: Black-box Enforcement of Content Security Policy upon Real-world Websites
 
+# CCS2015
+
+## FlowWatcher: Defending against Data Disclosure Vulnerabilities in Web Applications
+10.1145/2810103.2813639
+
+
+
+# CSS2014
+
+## MACE: Detecting Privilege Escalation Vulnerabilities in Web Applications
+
+
+
 ## NDSS2019
 Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment
 https://daoyuan14.github.io/papers/NDSS19_OpenPort.pdf
 
 # NDSS2018
 
-SYNODE: Understanding and Automatically Preventing Injection Attacks on NODE.JS.
+## SYNODE: Understanding and Automatically Preventing Injection Attacks on NODE.JS
+### 摘要
+我们在研究中发现Nodejs的很多模块存在命令注入攻击的问题，为此我们题注了Synode，一个结合静态分析和动态的方法，来使用户安全的使用这些有问题的库。具体来说，Synode静态分析哪些值会传播到API中，并且在安装时修复；动态运行时，它截恶意请求防止他们传递到api中。
+### 相关工作
+* X. Jin, X. Hu, K. Ying, W. Du, H. Yin, and G. N. Peri. Code injection attacks on HTML5-based mobile apps: Characterization, detection and mitigation. In Conference on Computer and Communications Security, pages 66–77, 2014
+* P. Saxena, D. Molnar, and B. Livshits. SCRIPTGARD: automatic context-sensitive sanitization for large-scale legacy web applications. In CCS, pages 601–614, 2011. 
+* M. Ter Louw and V. N. Venkatakrishnan. Blueprint: Robust prevention of cross-site scripting attacks for existing browsers. In Sec. and Privacy, pages 331–346, 2009. 
+* S. Guarnieri and B. Livshits. GATEKEEPER: mostly static enforcement of security and reliability policies for JavaScript code. In USENIX Security, pages 151–168, 2009. 
 
-## Riding out DOMsday: Towards Detecting and Preventing DOM Cross-Site Scripting[NDSS18]
+## Riding out DOMsday: Towards Detecting and Preventing DOM Cross-Site Scripting
 ### 什么是DOM型XSS：
 ![1546778397220](readme/1546778397220.png)
 ### 怎么防御：
@@ -90,7 +113,7 @@ SYNODE: Understanding and Automatically Preventing Injection Attacks on NODE.JS.
 
 ### 方法
 
-我们使用了向V8引擎注入污点技术，具体来说，我们在每个输入的字符串上增加了一个标记，最后看这些标记是否会被document.write()等函数带出。在中间过程中我们需要考虑encodeURI等函数，他们应使标记失效。
+我们使用了向V8引擎注入污点技术，具体来说，我们在每个输入的字符串上增加了一个标记，最后看这些标记是否会被document.write()等函数(sink function)带出。在中间过程中我们需要考虑encodeURI等函数，他们应使标记失效。
 
 ### 实验结果
 
@@ -98,21 +121,47 @@ SYNODE: Understanding and Automatically Preventing Injection Attacks on NODE.JS.
 
 ### 相关链接
 
-https://github.com/wrmelicher/ChromiumTaintTracking
+* https://github.com/wrmelicher/ChromiumTaintTracking
+* S. Lekies, B. Stock, and M. Johns, “25 million flows later: large-scale detection of DOM-based XSS,” in Proc. CCS, 2013, pp. 1193–1204.
 
 ## NDSS2017
 
 Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web.
 
-## NDSS2016
+# NDSS2016
 
-Attack Patterns for Black-Box Security Testing of Multi-Party Web Applications. 
-
+## Attack Patterns for Black-Box Security Testing of Multi-Party Web Applications. 
 我们针对单点登陆(SSO)存在的问题，设计了两种攻击模式CSRF和XSS，并且基于ZAP设计了扫描器，经过实验我们发先它能发现知名网站的安全性问题。
 
-## NDSS15
-Exploiting and Protecting Dynamic Code Generation.
+# NDSS2015
 
-## NDSS14
-Toward Black-Box Detection of Logic Flaws in Web Applications.
+## FlowWatcher: Defending against Data Disclosure Vulnerabilities in Web Applications
+
+
+
+# NDSS2014
+## Toward Black-Box Detection of Logic Flaws in Web Applications
+
+
+
+## MACE: Detecting Privilege Escalation Vulnerabilities in Web Applications
+
+
+
+# S&P2018
+## Study and Mitigation of Origin Stripping Vulnerabilities in Hybrid-postMessage Enabled Mobile Applications
+
+
+
+## Mobile Application Web API Reconnaissance: Web-to-Mobile Inconsistencies & Vulnerabilities. 
+
+
+
+# S&P2017
+## Cloak of Visibility: Detecting When Machines Browse a Different Web
+
+
+
+## The Cracked Cookie Jar: HTTP Cookie Hijacking and the Exposure of Private Information.
+
 
