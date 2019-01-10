@@ -89,9 +89,20 @@ CSPAutoGen: Black-box Enforcement of Content Security Policy upon Real-world Web
 
 
 
-## NDSS2019
-Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment
+# NDSS2019
+## Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment
 https://daoyuan14.github.io/papers/NDSS19_OpenPort.pdf
+
+## Time Does Not Heal All Wounds: A Longitudinal Analysis of Security-Mechanism Support in Mobile Browsers
+
+我们发现web应用存在的问题仍然会在Android中出现，但是很多移动端浏览器并没有遵从安全准则
+
+## Don’t Trust The Locals: Investigating the Prevalence of Persistent Client-Side Cross-Site Scripting in the Wild
+
+我们通过污点跟踪技术寻找客户端的XSS问题
+
+* JavaScript Template Attacks: Automatically Inferring Host Information for Targeted Exploits
+* How to end password reuse on the web
 
 # NDSS2018
 
@@ -142,11 +153,11 @@ Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries 
 # NDSS2014
 ## Toward Black-Box Detection of Logic Flaws in Web Applications
 
-
+由于缺失文档，判断逻辑漏洞十分困难，现有的工具需要调查源代码或是只适用于小规模应用，而我们利用用户产生的流量产生一个行为序列，接着重用这个序列判断网站是否存在问题。
 
 ## MACE: Detecting Privilege Escalation Vulnerabilities in Web Applications
 
-
+我们实现了工具MACE，通过访问资源时的上下文不一致性来识别水平特权升级漏洞
 
 # S&P2018
 ## Study and Mitigation of Origin Stripping Vulnerabilities in Hybrid-postMessage Enabled Mobile Applications
