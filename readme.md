@@ -20,6 +20,11 @@
 ## We Still Don’t Have Secure Cross-Domain Requests: an Empirical Study of CORS.
 
 ## FlowCog: Context-aware Semantics Extraction and Analysis of Information Flow Leaks in Android Apps.
+Android访问私人信息是否合法取决于应用是否向用户提供了足够的解释，FlowCog从Android视图中抽取相关的语义，再用NLP方法推断语义与给定流是否相关。
+
+### 相关资料
+
+* https: //github.com/SocietyMaster/FlowCog. 
 
 ## Same-Origin Policy: Evaluation in Modern Browsers. 
 
@@ -44,8 +49,6 @@
 
 ## On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities
 
-
-
 # FSE2018
 
 ## The impact of regular expression denial of service (ReDoS) in practice: an empirical study at the ecosystem scale. **ReDoS哦*
@@ -66,7 +69,8 @@
 
 ## Tail Attacks on Web Applications
 
-## Deemon: Detecting CSRF with Dynamic Analysis and Property Graphs **动态检测CSRF，可以先读一下**
+## Deemon: Detecting CSRF with Dynamic Analysis and Property Graphs 
+我们提出检测CSRF的框架，该框架考虑了web应用的执行流程，数据流以及整体架构，构建一个属性图，然后使用图遍历，发觉潜在的CSRF问题。Deemon自动判断web应用的执行环境，接着无监督的产生动态记录，比如网络交互，服务端执行和数据库操作，使用这些记录Deemon构建一个图模型，他表示捕获的状态转换和数据流；接着遍历这个图来发觉http状态变换，这些变换与CSRF流动现骨干。
 
 ## AUTHSCOPE: Towards Automatic Discovery of Vulnerable Authorizations in Online Services*
 
@@ -81,8 +85,7 @@
 # CCS2015
 
 ## FlowWatcher: Defending against Data Disclosure Vulnerabilities in Web Applications
-10.1145/2810103.2813639
-
+web应用会出现水平越权的问题，由于很多网站的用户访问控制模型类似，因此我们可以布置一个外部代理（nginx端），然后观察用户的所有流量，然后根据预期的访问控制策略规范来侦测未经授权的访问。
 
 
 # CSS2014
@@ -170,7 +173,9 @@
 
 
 ## Mobile Application Web API Reconnaissance: Web-to-Mobile Inconsistencies & Vulnerabilities. 
+为了节约算力，很多webAPI的验证工作会在移动端进行，但是如果web端不重复验证的话，就会产生不一致的问题，攻击者可以篡改流量来攻击web应用。本文中，我们提出一个工具：WARDroid，它可以自动化的寻找web端和移动端的不一致问题。具体来说，WARDroid静态分析android app中的http通讯模板，接着通过黑盒测试的方法识别不一致性。
 
+**Idea: **可不可以做一个web的？因为web的前后端分离也会造成不一致问题。
 
 
 # S&P2017
@@ -178,5 +183,4 @@
 
 
 ## The Cracked Cookie Jar: HTTP Cookie Hijacking and the Exposure of Private Information.
-
-
+由于不使用HTTPS，http存在中间人攻击的问题，本文总结了这些问题。
