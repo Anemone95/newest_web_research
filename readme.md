@@ -11,70 +11,72 @@
 ### 相关文献
 * https://github.com/aalhuz/navex
 
-Freezing the Web: A Study of ReDoS Vulnerabilities in JavaScript-based Web Servers. 
+## Freezing the Web: A Study of ReDoS Vulnerabilities in JavaScript-based Web Servers. 
 
-Rampart: protecting web applications from CPU-exhaustion denial-of-service attacks.
+## Rampart: protecting web applications from CPU-exhaustion denial-of-service attacks.
 
-Who left open the cookie jar? a comprehensive evaluation of third-party cookie policies.
+## Who left open the cookie jar? a comprehensive evaluation of third-party cookie policies.
 
-We Still Don’t Have Secure Cross-Domain Requests: an Empirical Study of CORS.
+## We Still Don’t Have Secure Cross-Domain Requests: an Empirical Study of CORS.
 
-FlowCog: Context-aware Semantics Extraction and Analysis of Information Flow Leaks in Android Apps.
+## FlowCog: Context-aware Semantics Extraction and Analysis of Information Flow Leaks in Android Apps.
 
-Same-Origin Policy: Evaluation in Modern Browsers. 
+## Same-Origin Policy: Evaluation in Modern Browsers. 
 
-## USENIX2017
+# USENIX2017
 
-CCSP: Controlled Relaxation of Content Security Policies by Runtime Policy Composition.
+## CCSP: Controlled Relaxation of Content Security Policies by Runtime Policy Composition.
 
-Same-Origin Policy: Evaluation in Modern Browsers.
+## Same-Origin Policy: Evaluation in Modern Browsers.
 
-Measuring the Insecurity of Mobile Deep Links of Android. 
+## Measuring the Insecurity of Mobile Deep Links of Android. 
 
-How the Web Tangled Itself: Uncovering the History of Client-Side Web (In)Security. 
+## How the Web Tangled Itself: Uncovering the History of Client-Side Web (In)Security. 
 
-Loophole: Timing Attacks on Shared Event Loops in Chrome.
-
-
-## USENIX2016
-
-k-fingerprinting: A Robust Scalable Website Fingerprinting Technique
-
-Hey, You Have a Problem: On the Feasibility of Large-Scale Web Vulnerability Notification.
-
-On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities
+## Loophole: Timing Attacks on Shared Event Loops in Chrome.
 
 
+# USENIX2016
 
-## FSE2018
+## k-fingerprinting: A Robust Scalable Website Fingerprinting Technique
 
-The impact of regular expression denial of service (ReDoS) in practice: an empirical study at the ecosystem scale. **ReDoS哦*
+## Hey, You Have a Problem: On the Feasibility of Large-Scale Web Vulnerability Notification.
+
+## On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities
 
 
 
-## ASE2018
+# FSE2018
 
-ReScue: crafting regular expression DoS attacks. **ReDoS怎么那么多？难道是现在的研究热点吗？**
+## The impact of regular expression denial of service (ReDoS) in practice: an empirical study at the ecosystem scale. **ReDoS哦*
 
-## ASE2017
+# ASE2018
 
-Static detection of asymptotic resource side-channel vulnerabilities in web applications.
+## ReScue: crafting regular expression DoS attacks. **ReDoS怎么那么多？难道是现在的研究热点吗？**
 
-## CCS2018
+# ASE2017
 
-Predicting Impending Exposure to Malicious Content from User Behavior.
+## Static detection of asymptotic resource side-channel vulnerabilities in web applications.
 
-## CCS2017
+# CCS2018
 
-Tail Attacks on Web Applications
+## Predicting Impending Exposure to Malicious Content from User Behavior.
 
-Deemon: Detecting CSRF with Dynamic Analysis and Property Graphs. **动态检测CSRF，可以先读一下**
+# CCS2017
 
-## CCS2016
+## Tail Attacks on Web Applications
 
-Chainsaw: Chained Automated Workflow-based Exploit Generation.
+## Deemon: Detecting CSRF with Dynamic Analysis and Property Graphs **动态检测CSRF，可以先读一下**
 
-CSPAutoGen: Black-box Enforcement of Content Security Policy upon Real-world Websites
+## AUTHSCOPE: Towards Automatic Discovery of Vulnerable Authorizations in Online Services*
+
+我们设计AuthScope工具，该工具能够自动执行移动应用程序，并在相应的在线服务中识别出易受攻击的访问控制实现。
+
+# CCS2016
+
+## Chainsaw: Chained Automated Workflow-based Exploit Generation.
+
+## CSPAutoGen: Black-box Enforcement of Content Security Policy upon Real-world Websites
 
 # CCS2015
 
@@ -87,11 +89,11 @@ CSPAutoGen: Black-box Enforcement of Content Security Policy upon Real-world Web
 
 ## MACE: Detecting Privilege Escalation Vulnerabilities in Web Applications
 
-
+我们实现了工具MACE，通过访问资源时的上下文不一致性来识别水平特权升级漏洞
 
 # NDSS2019
 ## Understanding Open Ports in Android Applications: Discovery, Diagnosis, and Security Assessment
-https://daoyuan14.github.io/papers/NDSS19_OpenPort.pdf
+通过众包方式了解到Android应用程序中开放端口的普及度为15.3%；我们还开发了一种新的静态诊断工具，显示61.8%的开放端口应用程序完全是由嵌入式sdk开发的，20.7%的应用程序使用了不安全的API。我们得出关于端口安全的三个结论：（1）脆弱性分析显示了以Instagram，SamsungGear，Skype，和FacebookSDK为首的5种脆弱的模式；（2）众包显示了224个蜂窝网络和2181个WiFi模式；（3）关于对端口进行DoS攻击的实验性演示
 
 ## Time Does Not Heal All Wounds: A Longitudinal Analysis of Security-Mechanism Support in Mobile Browsers
 
@@ -99,10 +101,15 @@ https://daoyuan14.github.io/papers/NDSS19_OpenPort.pdf
 
 ## Don’t Trust The Locals: Investigating the Prevalence of Persistent Client-Side Cross-Site Scripting in the Wild
 
-我们通过污点跟踪技术寻找客户端的XSS问题
+我们通过污点跟踪技术寻找客户端的XSS问题(感觉跟“Riding out DOMsday: Towards Detecting and Preventing DOM Cross-Site Scripting”的研究很像)
 
-* JavaScript Template Attacks: Automatically Inferring Host Information for Targeted Exploits
-* How to end password reuse on the web
+## CodeAlchemist: Semantics-Aware Code Generation to Find Vulnerabilities in JavaScript Engines
+
+我们设计了一套js代码生成工具，他可以生成语义和语法上都正确的JavaScript片段，因此可以用于fuzz来发现JavaScript引擎的许多漏洞。具体来说，我们将种子分解为代码片段，每一个片段用一段约束来标记，这些约束表示它与其他代码块在一起的条件。
+
+## JavaScript Template Attacks: Automatically Inferring Host Information for Targeted Exploits
+
+## How to end password reuse on the web
 
 # NDSS2018
 
@@ -135,9 +142,9 @@ https://daoyuan14.github.io/papers/NDSS19_OpenPort.pdf
 * https://github.com/wrmelicher/ChromiumTaintTracking
 * S. Lekies, B. Stock, and M. Johns, “25 million flows later: large-scale detection of DOM-based XSS,” in Proc. CCS, 2013, pp. 1193–1204.
 
-## NDSS2017
+# NDSS2017
 
-Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web.
+## Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web.
 
 # NDSS2016
 
@@ -155,9 +162,7 @@ Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries 
 
 由于缺失文档，判断逻辑漏洞十分困难，现有的工具需要调查源代码或是只适用于小规模应用，而我们利用用户产生的流量产生一个行为序列，接着重用这个序列判断网站是否存在问题。
 
-## MACE: Detecting Privilege Escalation Vulnerabilities in Web Applications
 
-我们实现了工具MACE，通过访问资源时的上下文不一致性来识别水平特权升级漏洞
 
 # S&P2018
 ## Study and Mitigation of Origin Stripping Vulnerabilities in Hybrid-postMessage Enabled Mobile Applications
@@ -170,7 +175,6 @@ Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries 
 
 # S&P2017
 ## Cloak of Visibility: Detecting When Machines Browse a Different Web
-
 
 
 ## The Cracked Cookie Jar: HTTP Cookie Hijacking and the Exposure of Private Information.
