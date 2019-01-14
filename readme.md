@@ -11,13 +11,17 @@
 ### 相关文献
 * https://github.com/aalhuz/navex
 
-## Freezing the Web: A Study of ReDoS Vulnerabilities in JavaScript-based Web Servers. 
+## Freezing the Web: A Study of ReDoS Vulnerabilities in JavaScript-based Web Servers[ReDoS]
 
-## Rampart: protecting web applications from CPU-exhaustion denial-of-service attacks.
+JavaScript的单线程执行模型使得基于JavaScript的web服务器特别容易受到ReDoS攻击。因此我们对2846个流行的网站进行分析，并且发现了25个之前未知的流行模块漏洞。
 
-## Who left open the cookie jar? a comprehensive evaluation of third-party cookie policies.
 
-## We Still Don’t Have Secure Cross-Domain Requests: an Empirical Study of CORS.
+
+## 2Rampart: protecting web applications from CPU-exhaustion denial-of-service attacks.
+
+## 3Who left open the cookie jar? a comprehensive evaluation of third-party cookie policies.
+
+## 4We Still Don’t Have Secure Cross-Domain Requests: an Empirical Study of CORS.
 
 ## FlowCog: Context-aware Semantics Extraction and Analysis of Information Flow Leaks in Android Apps.
 Android访问私人信息是否合法取决于应用是否向用户提供了足够的解释，FlowCog从Android视图中抽取相关的语义，再用NLP方法推断语义与给定流是否相关。
@@ -26,48 +30,60 @@ Android访问私人信息是否合法取决于应用是否向用户提供了足�
 
 * https: //github.com/SocietyMaster/FlowCog. 
 
-## Same-Origin Policy: Evaluation in Modern Browsers. 
+## 13Same-Origin Policy: Evaluation in Modern Browsers. 
 
 # USENIX2017
 
-## CCSP: Controlled Relaxation of Content Security Policies by Runtime Policy Composition.
+## 5CCSP: Controlled Relaxation of Content Security Policies by Runtime Policy Composition.
 
-## Same-Origin Policy: Evaluation in Modern Browsers.
+## 6Same-Origin Policy: Evaluation in Modern Browsers.
 
-## Measuring the Insecurity of Mobile Deep Links of Android. 
+## 7Measuring the Insecurity of Mobile Deep Links of Android. 
 
-## How the Web Tangled Itself: Uncovering the History of Client-Side Web (In)Security. 
+## 8How the Web Tangled Itself: Uncovering the History of Client-Side Web (In)Security. 
 
-## Loophole: Timing Attacks on Shared Event Loops in Chrome.
+## 9Loophole: Timing Attacks on Shared Event Loops in Chrome.
 
 
 # USENIX2016
 
-## k-fingerprinting: A Robust Scalable Website Fingerprinting Technique
+## 10k-fingerprinting: A Robust Scalable Website Fingerprinting Technique
 
-## Hey, You Have a Problem: On the Feasibility of Large-Scale Web Vulnerability Notification.
+## 11Hey, You Have a Problem: On the Feasibility of Large-Scale Web Vulnerability Notification.
 
-## On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities
+## 12On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities
 
 # FSE2018
 
-## The impact of regular expression denial of service (ReDoS) in practice: an empirical study at the ecosystem scale. **ReDoS哦*
+## The impact of regular expression denial of service (ReDoS) in practice: an empirical study at the ecosystem scale[ReDoS]
+
+正则表达式是导致拒绝服务的新原因，本文中我们实证研究了ReDoS的三个方面：实际中超线性正则表达式（super-linear regex）的使用率，他们如何预防DoS攻击以及他们如何被修复。我们发现大量的JavaScript和Python依靠正则表达式，同时反模式（anti-patterns）有很少的漏报但是有很多误报，因此这些反模式是必要但不充分的。最后我们发现对待超线性表达式，开发者愿意修改它而不是截断输入或是写心得
 
 # ASE2018
 
-## ReScue: crafting regular expression DoS attacks. **ReDoS怎么那么多？难道是现在的研究热点吗？**
+## ReScue: crafting regular expression DoS attacks[ReDoS]
+
+本文介绍了一种三阶段灰盒分析技术ReScure，他可以自动生成ReDoS字符串。它通过遗传算法选择种子，接着使用正则表达式算法选择具有最大搜索时间的字符串。
+
+备注：南大计算机做的研究，好像也在搞移动测试
 
 # ASE2017
 
-## Static detection of asymptotic resource side-channel vulnerabilities in web applications.
+## Static detection of asymptotic resource side-channel vulnerabilities in web applications[side channel] 
+
+我们开发了一个SCANNER的工具，用于检测PHP应用程序中与资源相关的侧信道泄露漏洞——例如一个关于健康的网站，泄露了病人吃药的时间。
 
 # CCS2018
 
-## Predicting Impending Exposure to Malicious Content from User Behavior.
+## Predicting Impending Exposure to Malicious Content from User Behavior[defense]
+
+我们提出了一种系统，可以再单个浏览会话级别上观察用户行为，从而预测他们是否是攻击型为，已达到提前预防的目的。
 
 # CCS2017
 
-## Tail Attacks on Web Applications
+## Tail Attacks on Web Applications[DDoS]
+
+本文介绍了一种新型的DDoS攻击，这种攻击利用了网络应用的复杂性和依赖于分布式的特性，使网络响应大于1秒，我们构建了一个模型来检测这一攻击并且提出了一种防御方法。
 
 ## Deemon: Detecting CSRF with Dynamic Analysis and Property Graphs 
 我们提出检测CSRF的框架，该框架考虑了web应用的执行流程，数据流以及整体架构，构建一个属性图，然后使用图遍历，发觉潜在的CSRF问题。Deemon自动判断web应用的执行环境，接着无监督的产生动态记录，比如网络交互，服务端执行和数据库操作，使用这些记录Deemon构建一个图模型，他表示捕获的状态转换和数据流；接着遍历这个图来发觉http状态变换，这些变换与CSRF流动现骨干。
@@ -78,9 +94,13 @@ Android访问私人信息是否合法取决于应用是否向用户提供了足�
 
 # CCS2016
 
-## Chainsaw: Chained Automated Workflow-based Exploit Generation.
+## Chainsaw: Chained Automated Workflow-based Exploit Generation[EXP Gen]*	
+
+我们设计了一套EXP生成工具，以提高web注入漏洞的识别能力。为此该工具基于应用的数据流，数据库模型和本机函数等应对web应用程序的多模块，用户输入和多层架构的挑战。
 
 ## CSPAutoGen: Black-box Enforcement of Content Security Policy upon Real-world Websites
+
+CSP是防御XSS攻击的好方式，但是据了解只有0.002%的网站使用了CSP，为此我们设计了工具CSPAutoGen，他为每个网站训练一个模板，再基于模板产生CSP规则。
 
 # CCS2015
 
@@ -110,9 +130,9 @@ web应用会出现水平越权的问题，由于很多网站的用户访问控�
 
 我们设计了一套js代码生成工具，他可以生成语义和语法上都正确的JavaScript片段，因此可以用于fuzz来发现JavaScript引擎的许多漏洞。具体来说，我们将种子分解为代码片段，每一个片段用一段约束来标记，这些约束表示它与其他代码块在一起的条件。
 
-## JavaScript Template Attacks: Automatically Inferring Host Information for Targeted Exploits
+## JavaScript Template Attacks: Automatically Inferring Host Information for Targeted Exploits[javascript]
 
-## How to end password reuse on the web
+没找到论文
 
 # NDSS2018
 
@@ -147,7 +167,8 @@ web应用会出现水平越权的问题，由于很多网站的用户访问控�
 
 # NDSS2017
 
-## Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web.
+## Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web[javascript]
+web开发者会应用很多第三方库（比如jQuery），这些库的旧版本存在漏洞，我们对Alexa有排行的网站镜像进行了调查。
 
 # NDSS2016
 
@@ -156,21 +177,18 @@ web应用会出现水平越权的问题，由于很多网站的用户访问控�
 
 # NDSS2015
 
-## FlowWatcher: Defending against Data Disclosure Vulnerabilities in Web Applications
-
+## FlowWatcher: Defending against Data Disclosure Vulnerabilities in Web Applications[访问控制]
+Web应用中存在数据泄露的问题，这是由于访问控制逻辑存在错误导致的，由于很多网站的用户访问控制模型类似，因此我们可以布置一个外部代理（nginx端），然后观察用户的所有流量，最后根据预期的访问控制策略规范来侦测未经授权的访问。
 
 
 # NDSS2014
-## Toward Black-Box Detection of Logic Flaws in Web Applications
-
+## Toward Black-Box Detection of Logic Flaws in Web Applications[逻辑漏洞]
 由于缺失文档，判断逻辑漏洞十分困难，现有的工具需要调查源代码或是只适用于小规模应用，而我们利用用户产生的流量产生一个行为序列，接着重用这个序列判断网站是否存在问题。
-
 
 
 # S&P2018
 ## Study and Mitigation of Origin Stripping Vulnerabilities in Hybrid-postMessage Enabled Mobile Applications
-
-
+web app通过post进行跨域请求，安卓的混合应用也会使用这些技术，它拓展了postMessage（我们称为“hybird postMessage”，同时也引入了新的问题——origin stripping vulnerability。本文中我们设计了一个工具来检测这问题。
 
 ## Mobile Application Web API Reconnaissance: Web-to-Mobile Inconsistencies & Vulnerabilities. 
 为了节约算力，很多webAPI的验证工作会在移动端进行，但是如果web端不重复验证的话，就会产生不一致的问题，攻击者可以篡改流量来攻击web应用。本文中，我们提出一个工具：WARDroid，它可以自动化的寻找web端和移动端的不一致问题。具体来说，WARDroid静态分析android app中的http通讯模板，接着通过黑盒测试的方法识别不一致性。
@@ -179,8 +197,9 @@ web应用会出现水平越权的问题，由于很多网站的用户访问控�
 
 
 # S&P2017
-## Cloak of Visibility: Detecting When Machines Browse a Different Web
-
-
 ## The Cracked Cookie Jar: HTTP Cookie Hijacking and the Exposure of Private Information.
 由于不使用HTTPS，http存在中间人攻击的问题，本文总结了这些问题。
+
+# S&P2016
+## Cloak of Visibility: Detecting When Machines Browse a Different Web
+恶意网站会使用复杂技术隐藏自身，防止被搜索引擎发现其本质。我们调查了暗网的十大著名技术，并且开发了一种反隐身系统。
