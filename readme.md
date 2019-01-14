@@ -15,13 +15,19 @@
 
 JavaScript的单线程执行模型使得基于JavaScript的web服务器特别容易受到ReDoS攻击。因此我们对2846个流行的网站进行分析，并且发现了25个之前未知的流行模块漏洞。
 
+## Rampart: protecting web applications from CPU-exhaustion denial-of-service attacks[DoS]
 
+高度复杂的DoS攻击只需要少量请求就可导致大量资源消耗，为此，我们设计工具Rampart，它通过统计方法和函数级别的程序分析方法，合成并部署过滤器来阻止DoS攻击。
 
-## 2Rampart: protecting web applications from CPU-exhaustion denial-of-service attacks.
+## Who left open the cookie jar? a comprehensive evaluation of third-party cookie policies[Cookie]
 
-## 3Who left open the cookie jar? a comprehensive evaluation of third-party cookie policies.
+cookie容易受到XSS攻击，为此浏览器形成了各种保护机制和政策，本文能通过一个强制执行第三方请求的框架自动化评估这些防御机制的有效性，我们评估了7个浏览器的策略实现和46个浏览器插件，我们发现即使是内置的保护机制也可以被许多新技术绕过。
 
-## 4We Still Don’t Have Secure Cross-Domain Requests: an Empirical Study of CORS.
+思考：Android Browser是不是也有这类问题？
+
+## We Still Don’t Have Secure Cross-Domain Requests: an Empirical Study of CORS
+
+开发者提出一些解决方法（比如JSONP）来绕过同源策略，这些方法同时引入了安全问题，CORS是一种更加规范的机制，但是本文通过实证研究发现，CORS的设计和部署受到许多新的安全问题影响：1）CORS放宽了跨域写权限2）开发人员不了解CORS导致错误配置。
 
 ## FlowCog: Context-aware Semantics Extraction and Analysis of Information Flow Leaks in Android Apps.
 Android访问私人信息是否合法取决于应用是否向用户提供了足够的解释，FlowCog从Android视图中抽取相关的语义，再用NLP方法推断语义与给定流是否相关。
@@ -30,7 +36,7 @@ Android访问私人信息是否合法取决于应用是否向用户提供了足�
 
 * https: //github.com/SocietyMaster/FlowCog. 
 
-## 13Same-Origin Policy: Evaluation in Modern Browsers. 
+## 4Same-Origin Policy: Evaluation in Modern Browsers. 
 
 # USENIX2017
 
@@ -52,6 +58,26 @@ Android访问私人信息是否合法取决于应用是否向用户提供了足�
 ## 11Hey, You Have a Problem: On the Feasibility of Large-Scale Web Vulnerability Notification.
 
 ## 12On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities
+
+
+
+# USENIX2015
+
+## 13The Unexpected Dangers of Dynamic JavaScript
+
+## 14Cookies Lack Integrity: Real-World Implications
+
+## 15ZigZag: Automatically Hardening Web Applications Against Client-side Validation Vulnerabilities
+
+
+
+# USENIX 2014
+
+## 16Automatically Detecting Vulnerable Websites Before They Turn Malicious.
+
+## 17Precise Client-side Protection against DOM-based Cross-Site Scripting.
+
+## 18Static Detection of Second-Order Vulnerabilities in Web Applications
 
 # FSE2018
 
@@ -130,9 +156,9 @@ web应用会出现水平越权的问题，由于很多网站的用户访问控�
 
 我们设计了一套js代码生成工具，他可以生成语义和语法上都正确的JavaScript片段，因此可以用于fuzz来发现JavaScript引擎的许多漏洞。具体来说，我们将种子分解为代码片段，每一个片段用一段约束来标记，这些约束表示它与其他代码块在一起的条件。
 
-## JavaScript Template Attacks: Automatically Inferring Host Information for Targeted Exploits[javascript]
+## JavaScript Template Attacks: Automatically Inferring Host Information for Targeted Exploits[SideChannel]
 
-没找到论文
+如今的浏览器会提供匿名功能隐藏信息，而本文提出了一种自动化推断系统信息（包括软件和硬件）的方法，该方法通过JavaScript引擎收集各种数据，再根据这些属性创建模板，如果这个模板的某一属性在各个系统上都不相同则它是一个依赖于环境的属性。
 
 # NDSS2018
 
@@ -203,3 +229,24 @@ web app通过post进行跨域请求，安卓的混合应用也会使用这些技
 # S&P2016
 ## Cloak of Visibility: Detecting When Machines Browse a Different Web
 恶意网站会使用复杂技术隐藏自身，防止被搜索引擎发现其本质。我们调查了暗网的十大著名技术，并且开发了一种反隐身系统。
+
+
+
+# S&P2015
+
+## 19Effective Real-Time Android Application Auditing
+
+
+
+# S&P 2014
+
+## 20Automating Isolation and Least Privilege in Web Services.
+
+
+
+## 21Hunting the Red Fox Online: Understanding and Detection of Mass Redirect-Script Injections
+
+
+
+## 22All Your Screens Are Belong to Us: Attacks Exploiting the HTML5 Screen Sharing API
+
