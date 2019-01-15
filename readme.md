@@ -36,48 +36,64 @@ Android访问私人信息是否合法取决于应用是否向用户提供了足�
 
 * https: //github.com/SocietyMaster/FlowCog. 
 
-## 4Same-Origin Policy: Evaluation in Modern Browsers. 
+## Same-Origin Policy: Evaluation in Modern Browsers[invest]
+
+SOP-DOM是同源策略的自己，它控制主文档和嵌入文档之间的交互，但是没有正式的规范，本文通过实证研究，发现除了Web Origins之外，SOP-DOM授予的访问权限至少取决于三个属性：嵌入元素（EE）的类型，沙箱（浏览器）和CORS属性。
 
 # USENIX2017
 
-## 5CCSP: Controlled Relaxation of Content Security Policies by Runtime Policy Composition.
+## 2CCSP: Controlled Relaxation of Content Security Policies by Runtime Policy Composition.
 
-## 6Same-Origin Policy: Evaluation in Modern Browsers.
+## 3Same-Origin Policy: Evaluation in Modern Browsers.
 
-## 7Measuring the Insecurity of Mobile Deep Links of Android. 
+## 4Measuring the Insecurity of Mobile Deep Links of Android. 
 
-## 8How the Web Tangled Itself: Uncovering the History of Client-Side Web (In)Security. 
+## How the Web Tangled Itself: Uncovering the History of Client-Side Web (In)Security[invest]
 
-## 9Loophole: Timing Attacks on Shared Event Loops in Chrome.
+本文检查了97-16年的重要网站代码和标题信息，以此确定web技术的关键趋势，随后评估与之关联的漏洞，在调查解决他们的安全防御机制。本文发现自2000年以来，JavaScript开始流行，客户端注入的可能性增加，但CSP的部署却没有跟上，另外使用HTTP only cookie的网站更容易遭受XSS。
 
 
 # USENIX2016
 
-## 10k-fingerprinting: A Robust Scalable Website Fingerprinting Technique
+## k-fingerprinting: A Robust Scalable Website Fingerprinting Technique
 
-## 11Hey, You Have a Problem: On the Feasibility of Large-Scale Web Vulnerability Notification.
+攻击者可以在tor网络中实施被动攻击比如，指纹识别，本文提出了基于随机森林的网站指纹识别技术，它能抵抗tor和先进的网站指纹识别防御技术。
 
-## 12On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities
+## 8Hey, You Have a Problem: On the Feasibility of Large-Scale Web Vulnerability Notification
 
 
+
+## On Omitting Commits and Committing Omissions: Preventing Git Metadata Tampering That (Re)introduces Software Vulnerabilities[git]
+
+元数据攻击指针对版本控制系统的攻击方法，它欺骗开发者执行意外操作，比如将未经测试的代码合并到生产分支中，或是包含一致漏洞的组件。本文提出了一种防御方案，通过维护开发人员的加密签名后的日志环节这些攻击。
 
 # USENIX2015
 
-## 13The Unexpected Dangers of Dynamic JavaScript
+## The Unexpected Dangers of Dynamic JavaScript[js]
 
-## 14Cookies Lack Integrity: Real-World Implications
+JS存在XSS等安全性问题，为此我们进行了实证研究了它的影响，并且提出了安全防护方法。
 
-## 15ZigZag: Automatically Hardening Web Applications Against Client-side Validation Vulnerabilities
+## Cookies Lack Integrity: Real-World Implications[cookie|HSTS]
 
+设置了secure标志的cookie会被https加密传输，然而cookie的完整性仍然会受到攻击（没有应用HSTS），本文旨在了解攻击者如何进行一个cookie注入攻击以及
 
+## ZigZag: Automatically Hardening Web Applications Against Client-side Validation Vulnerabilities[js]
+
+现代网站大量依赖JS，这些JS存在客户端验证（client-side validation,CSV，多半是逻辑问题），它存在脆弱性，本文提出了一个检测该类问题的系统ZigZag，它是一个代理，透明的检测用户端代码，并且实时的获取执行状态，从中产生控制流和数据，以此识别与攻击相关的操作。
 
 # USENIX 2014
 
-## 16Automatically Detecting Vulnerable Websites Before They Turn Malicious.
+## Automatically Detecting Vulnerable Websites Before They Turn Malicious[mechine learning]
 
-## 17Precise Client-side Protection against DOM-based Cross-Site Scripting.
+本文使用数据挖掘和机器学习的几种技术，来预测一个给定的、未被侵入的网站是否会变得有问题。
 
-## 18Static Detection of Second-Order Vulnerabilities in Web Applications
+## Precise Client-side Protection against DOM-based Cross-Site Scripting[XSS]
+
+目前对XSS的防御依赖于字符串检测，本文通过实验揭示了这种方法不能抵御所有的XSS攻击，为此，本文提出了一种基于污点跟踪和感知的XSS过滤器。
+
+## Static Detection of Second-Order Vulnerabilities in Web Applications*
+
+Second-Order漏洞是指攻击载荷首先存储在应用服务器上，接着在其他操作时触发的漏洞，本文第一个提出了检测该漏洞的静态代码分析方法，其通过检测连接数据库或对web应用内存的读取和写入操作检测该问题。
 
 # FSE2018
 
@@ -234,19 +250,17 @@ web app通过post进行跨域请求，安卓的混合应用也会使用这些技
 
 # S&P2015
 
-## 19Effective Real-Time Android Application Auditing
+## Effective Real-Time Android Application Auditing[data leak]
 
-
+本文设计了一套动态审计工具来检查应用是否存在***数据泄露**问题，降低静态检测的误报率。
 
 # S&P 2014
 
-## 20Automating Isolation and Least Privilege in Web Services.
+## Automating Isolation and Least Privilege in Web Services.
 
+本文设计了一个防止数据未授权读写的系统Passe，它动态地从开发者提供的测试用例分析数据流和控制流，将应用分离成几个模块，并且将模块放入沙盒中运行。另外，我们将Passe嵌入了Django框架中，我们发现它可以正确地分析96%的策略，同时还可以防御XSS攻击。
 
+## Hunting the Red Fox Online: Understanding and Detection of Mass Redirect-Script Injections
 
-## 21Hunting the Red Fox Online: Understanding and Detection of Mass Redirect-Script Injections
-
-
-
-## 22All Your Screens Are Belong to Us: Attacks Exploiting the HTML5 Screen Sharing API
+本文开发了工具JsRED，一种用于自动检测**重定向脚本注入**的新技术，他通过比较当前的JS-lib版本和正常的版本差异判断脚本是否被替换。
 
